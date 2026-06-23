@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="음식점 창업 주방기기 무료상담 | 양주종합주방 30년 경력 오픈매니저 무료 실측, 3D 도면 설계, 업종별 동선 상담 | 031-841-8259">
+<title>양주종합주방 | 음식점 창업 주방기기 무료상담</title>
+<style>
+/* =========================================
+   RESET & BASE
+   외부 CDN, 이미지, 폰트 파일 의존성 없음
+   완전 독립형 — GitHub Pages 바로 업로드 가능
+========================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "맑은 고딕",
+    sans-serif;
+  background: #FAF7F2;
+  color: #1C2B39;
+  line-height: 1.6;
+  padding-bottom: 72px;
+}
+
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 560px; margin: 0 auto; padding: 0 22px; }
+
+/* =========================================
+   TOP NOTICE BAR
+========================================= */
+.topbar {
+  background: #1C2B39;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.015em;
+  padding: 9px 16px;
+}
+.topbar b { color: #FFB199; }
+
+/* =========================================
+   HERO
+========================================= */
+.hero { padding: 44px 0 36px; text-align: center; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #4F6373;
+  border: 1.5px solid #4F6373;
+  border-radius: 999px;
+  padding: 5px 16px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+}
+.hero h1 .danger {
+  color: #C03522;
+  position: relative;
+  display: inline-block;
+}
+.hero h1 .danger::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0;
+  height: 9px;
+  background: rgba(224, 67, 47, 0.18);
+  z-index: -1;
+}
+
+.hero .sub {
+  margin-top: 18px;
+  font-size: 15.5px;
+  color: #4F6373;
+  font-weight: 500;
+}
+.hero .sub b { color: #1C2B39; font-weight: 800; }
+.hero .sub .warn { color: #C03522; font-weight: 800; }
+
+/* 브랜드 카드 */
+.brand-card {
+  margin-top: 28px;
+  background: #fff;
+  border: 2px solid #1C2B39;
+  border-radius: 20px;
+  padding: 26px 20px 22px;
+  text-align: left;
+}
+.brand-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #C03522;
+  margin-bottom: 8px;
+}
+.brand-card h2 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.check-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 15.5px; font-weight: 700;
+}
+.check-list li::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #E0432F;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+.cta-btn {
+  display: flex;
+  align-items: center; justify-content: center; gap: 8px;
+  width: 100%;
+  background: #E0432F;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+  border-radius: 12px;
+  padding: 17px 0;
+  margin-top: 22px;
+  box-shadow: 0 6px 20px rgba(224, 67, 47, 0.30);
+  transition: transform 0.12s, box-shadow 0.12s;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+.cta-btn:active { transform: scale(0.97); box-shadow: none; }
+.cta-sub {
+  text-align: center;
+  font-size: 12.5px;
+  color: #7A909E;
+  margin-top: 10px;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+.divider { border-top: 1px dashed #E0D9CE; }
+
+/* =========================================
+   SECTION GENERIC
+========================================= */
+section { padding: 48px 0; }
+.sec-tag {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  color: #C03522;
+  margin-bottom: 10px;
+}
+.sec-title {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.sec-desc {
+  font-size: 14.5px;
+  color: #4F6373;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   WORRY CHECK LIST
+========================================= */
+.worry-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.worry-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: #fff;
+  border: 1.5px solid #E5DFD3;
+  border-radius: 12px;
+  padding: 15px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.chkbox {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border: 2px solid #1C2B39;
+  border-radius: 5px;
+  margin-top: 1px;
+}
+
+.worry-result {
+  margin-top: 20px;
+  background: #1C2B39;
+  color: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.6;
+}
+.worry-result .hl { color: #FFB199; }
+
+/* =========================================
+   WHY LIST
+========================================= */
+.why-list { display: flex; flex-direction: column; }
+.why-item {
+  display: flex; gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #E5DFD3;
+}
+.why-item:last-child { border-bottom: none; }
+.why-num {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  background: #1C2B39;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.why-text h4 { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+.why-text p { font-size: 13.5px; color: #4F6373; font-weight: 500; }
+
+/* =========================================
+   STEPS
+========================================= */
+.steps { display: flex; flex-direction: column; }
+.step {
+  display: flex; gap: 16px;
+  padding-bottom: 28px;
+}
+.step:last-child { padding-bottom: 0; }
+.step-left {
+  display: flex; flex-direction: column; align-items: center;
+  flex-shrink: 0;
+}
+.step-dot {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: #1C2B39;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.step:last-child .step-dot { background: #E0432F; }
+.step-line {
+  width: 2px; flex: 1;
+  background: #E5DFD3;
+  margin-top: 5px;
+}
+.step-body { padding-top: 4px; }
+.step-body h4 { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.step-body p { font-size: 13.5px; color: #4F6373; font-weight: 500; }
+
+/* =========================================
+   CLOSING
+========================================= */
+.closing {
+  background: #1C2B39;
+  color: #fff;
+  text-align: center;
+  padding: 56px 0 52px;
+}
+.closing .line1 { font-size: 16.5px; font-weight: 600; color: #8FA5B3; }
+.closing .line2 { font-size: 24px; font-weight: 900; margin-top: 5px; margin-bottom: 30px; }
+.closing .cta-btn { background: #E0432F; box-shadow: 0 6px 22px rgba(224,67,47,0.40); }
+.closing .addr {
+  margin-top: 28px;
+  font-size: 13px;
+  color: #8FA5B3;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.closing .addr strong { display: block; color: #fff; font-size: 15px; margin-bottom: 4px; }
+
+/* =========================================
+   STICKY BOTTOM BAR
+========================================= */
+.sticky-bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  border-top: 1px solid #E5DFD3;
+  box-shadow: 0 -5px 18px rgba(0,0,0,0.07);
+  padding: 10px 16px;
+  z-index: 100;
+}
+.sticky-bar .cta-btn { margin-top: 0; padding: 14px 0; font-size: 16px; }
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .cta-btn { transition: none; }
+}
+
+@media (min-width: 600px) {
+  .hero h1 { font-size: 32px; }
+  .sec-title { font-size: 25px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NOTICE -->
+<div class="topbar">
+  지금 전화상담 시 <b>무료 실측 + 3D 도면설계</b> 바로 안내해 드립니다
+</div>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">음식점 창업 준비 중이라면</span>
+    <h1>주방기기 계약 전,<br>이것부터 <span class="danger">확인</span>하세요</h1>
+    <p class="sub">
+      주방 설계를 한 번 잘못하면<br>
+      <b>영업 시작 후에도 매일 불편</b>하고,<br>
+      잘못된 기기 선택은 <span class="warn">수백만 원</span>의<br>
+      추가 비용으로 돌아옵니다.
+    </p>
+
+    <div class="brand-card reveal">
+      <div class="brand-label">양주종합주방</div>
+      <h2>단순 판매업체가 아닙니다.<br><b>30년 경력 오픈매니저</b>가 직접 상담합니다.</h2>
+      <ul class="check-list">
+        <li>무료 실측</li>
+        <li>3D 도면 설계</li>
+        <li>업종별 주방 동선 상담</li>
+        <li>예산에 맞는 장비 제안</li>
+      </ul>
+      <a href="tel:031-841-8259" class="cta-btn">
+        ☎&nbsp; 무료 창업상담 &nbsp;031-841-8259
+      </a>
+      <p class="cta-sub">전화 한 통이면 견적까지 끝까지 안내해 드립니다</p>
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ==================== 고민 체크리스트 ==================== -->
+<section>
+  <div class="wrap reveal">
+    <span class="sec-tag">CHECK</span>
+    <h3 class="sec-title">이런 고민이 있으신가요?</h3>
+    <p class="sec-desc">하나라도 해당된다면, 지금 상담받는 게 답입니다.</p>
+    <ul class="worry-list">
+      <li><span class="chkbox"></span>처음 창업이라 무엇부터 준비해야 할지 모르겠다</li>
+      <li><span class="chkbox"></span>주방 공간이 좁아 동선이 걱정된다</li>
+      <li><span class="chkbox"></span>신품과 중고 중 무엇이 유리한지 모르겠다</li>
+      <li><span class="chkbox"></span>예산에 맞는 주방기기 구성이 필요하다</li>
+      <li><span class="chkbox"></span>한 곳에서 모두 해결하고 싶다</li>
+    </ul>
+    <div class="worry-result">
+      하나라도 체크하셨다면<br>
+      <span class="hl">지금 바로 무료 상담</span>을 받아보세요.
+    </div>
+    <a href="tel:031-841-8259" class="cta-btn">☎&nbsp; 무료 상담 신청하기</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== 왜 양주종합주방 ==================== -->
+<section>
+  <div class="wrap reveal">
+    <span class="sec-tag">WHY US</span>
+    <h3 class="sec-title">왜 양주종합주방인가?</h3>
+    <p class="sec-desc">30년을 한 자리에서, 한 업종만 봐온 이유가 있습니다.</p>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-text">
+          <h4>오픈매니저 30년 경력</h4>
+          <p>수백 곳의 매장을 직접 설계해 온 경험</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-text">
+          <h4>무료 실측 + 3D 도면 설계</h4>
+          <p>눈으로 보고 결정할 수 있도록 미리 보여드립니다</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-text">
+          <h4>업소용 주방기기 전문</h4>
+          <p>업종별 동선과 효율까지 고려한 장비 제안</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-text">
+          <h4>주방용품 원스톱 구매</h4>
+          <p>여러 업체 돌아다닐 필요 없이 한 곳에서 해결</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">05</div>
+        <div class="why-text">
+          <h4>신품 · 중고 모두 상담 가능</h4>
+          <p>예산에 맞춰 솔직하게 알려드립니다</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== 상담 절차 ==================== -->
+<section>
+  <div class="wrap reveal">
+    <span class="sec-tag">PROCESS</span>
+    <h3 class="sec-title">상담 절차</h3>
+    <p class="sec-desc">전화 한 통으로 시작해서, 설치까지 함께합니다.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-left"><div class="step-dot">1</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <h4>전화 상담</h4>
+          <p>지금 바로 031-841-8259로 문의주세요</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-dot">2</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <h4>현장 실측</h4>
+          <p>매장을 직접 방문해 정확한 치수를 측정합니다</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-dot">3</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <h4>3D 도면 설계</h4>
+          <p>동선까지 고려한 주방 도면을 만들어 드립니다</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-dot">4</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <h4>맞춤 견적</h4>
+          <p>예산에 맞는 장비 구성과 견적을 제안합니다</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-dot">5</div></div>
+        <div class="step-body">
+          <h4>납품 및 설치</h4>
+          <p>설치까지 완료 후 영업 준비를 마칩니다</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CLOSING CTA ==================== -->
+<section class="closing">
+  <div class="wrap reveal">
+    <div class="line1">창업은 한 번이지만</div>
+    <div class="line2">주방은 매일 사용합니다.</div>
+    <p style="color:#8FA5B3; font-size:14.5px; font-weight:500; margin-bottom:10px;">기기 구매 전, 먼저 상담 받아보세요.</p>
+    <a href="tel:031-841-8259" class="cta-btn">
+      ☎&nbsp; 무료 창업상담 &nbsp;031-841-8259
+    </a>
+    <div class="addr">
+      <strong>양주종합주방</strong>
+      경기도 양주시 부흥로 1890
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STICKY BAR ==================== -->
+<div class="sticky-bar">
+  <div class="wrap">
+    <a href="tel:031-841-8259" class="cta-btn">☎&nbsp; 무료 창업상담 바로가기</a>
+  </div>
+</div>
+
+<!-- ==================== JS : Scroll Reveal ==================== -->
+<script>
+(function () {
+  'use strict';
+  var items = document.querySelectorAll('.reveal');
+  if (!window.IntersectionObserver) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(function (el) { obs.observe(el); });
+})();
+</script>
+
+</body>
+</html>
